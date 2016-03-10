@@ -15,11 +15,10 @@ describe("For the bestdeal kata,", function() {
     assert.deepEqual(result, [3, 3.50, 3.33, 2.90])
 
   });
-
+  
  it ('I should find the cheapest deal', function(){
    var result = avo.cheapest([3, 3.50, 3.33, 2.90]);
-   assert.deepEqual(result, [2.90])
-
+   assert.equal(result, "5 for R14.50")
  });
 
 });
