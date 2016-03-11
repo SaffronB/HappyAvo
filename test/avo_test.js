@@ -30,11 +30,27 @@ var assert = require("assert");
 
     });
 
-    it('I should get the cheapest deal', function() {
+    it('I should find the cheapest deal', function() {
 
       var result = avo.cheapest(['1 for R3', '2 for R7', '3 for R10', '5 for R14.50']);
       assert.equal(result, '5 for R14.50');
 
     });
+
+    it('I should find the most expensive deal', function() {
+
+      var result = avo.expensive(['1 for R3', '2 for R7', '3 for R10', '5 for R14.50']);
+      assert.equal(result, '2 for R7');
+
+    });
+
+    it('I should find the average price across all the deals', function() {
+
+      var result = avo.average([3.00, 3.50, 3.33, 2.90]);
+      assert.equal(result, 'R3.18');
+
+    });
+
+  
 
 });

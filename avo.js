@@ -17,12 +17,11 @@ exports.avoPrices = function(avoDealsArray) {
 
 exports.priceDealMap = function(avoDeals) {
   var avoPrices = exports.avoPrices;
-
-  var avoPricesArray = avoPrices(avoDeals);
+  var prices = avoPrices(avoDeals);
 
   var priceMap = {};
   for (var i = 0; i < avoDeals.length; i++) {
-    var price = avoPricesArray[i];
+    var price = prices[i];
     var deal = avoDeals[i];
     priceMap[price] = deal;
   }
@@ -34,9 +33,38 @@ exports.priceDealMap = function(avoDeals) {
 exports.cheapest = function(avoDeals) {
   var priceDealMap = exports.priceDealMap;
   var avoPrices = exports.avoPrices;
-  var avoPricesArray = avoPrices(avoDeals);
+  var prices = avoPrices(avoDeals);
   var priceMap = priceDealMap(avoDeals);
-  var cheapestPrice = Math.min.apply(null, avoPricesArray).toFixed(2);
-  return priceMap[cheapestPrice];
+  var cheapestDeal = Math.min.apply(null, prices).toFixed(2);
+  return priceMap[cheapestDeal];
+
+};
+
+exports.expensive = function(avoDeals) {
+  var priceDealMap = exports.priceDealMap;
+  var avoPrices = exports.avoPrices;
+  var prices = avoPrices(avoDeals);
+  var priceMap = priceDealMap(avoDeals);
+  var expensiveDeal = Math.max.apply(null, prices).toFixed(2);
+  return priceMap[expensiveDeal];
+
+};
+
+exports.average = function(avoDeals) {
+
+  // var avoPrices = exports.avoPrices;
+  // var prices = avoPrices(avoDeals);
+  var sumOfPrices = 0;
+
+  for (i = 0; i < avoDeals.length; i++) {
+    sumOfPrices += avoDeals[i];
+  }
+
+  var average = sumOfPrices / avoDeals.length;
+  var averagePrice = 'R' + (average).toFixed(2);
+
+  // averagePrice.push(sumOfPrices);
+
+  return averagePrice;
 
 };
