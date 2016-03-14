@@ -88,20 +88,29 @@ exports.cheapestOrange();
 
 
 // exports.applesAscending = function() {
-//var appleShopAscending = '';
 
 var appleArray = [];
-// var appleObject = {};
-// var appleShopAscending = [];
+
 for (var shop in content) {
   for (var fruit in content[shop]) {
     if (fruit === 'apples') {
-      appleArray[shop] = content[shop][fruit];
+    	var appleObject = {};
+      appleObject[shop] = content[shop][fruit];
+      appleArray.push(appleObject);
 
     }
   }
 };
+function compare(a,b) {
+  if (a < b)
+    return -1;
+  else if (a> b)
+    return 1;
+  else
+    return 0;
+}
 
-appleArray.sort();
+
+appleArray.sort(compare);
+
 console.log(appleArray)
-// appleArray.push(appleObject);
