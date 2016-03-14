@@ -23,9 +23,16 @@ describe("For the fruition project, ", function() {
   assert.deepEqual(result, 'chockers');
   });
 
-  // it('I should return the shops that stock apples and their prices, in an ascending order', function() {
-  // var result = fruition.applesAscending();
-  // assert.deepEqual(result, 'shopwrong: 2', 'kwakspar: 4', 'woolingsworth: 4', 'chockers: 5');
-  // });
+  it('I should return the shops that stock apples and their prices, in an ascending order', function() {
+  var result = fruition.applesAscending();
+  assert.deepEqual(result, [
+    shopwrong: 2,
+    kwakspar:4,
+    woolingsworth:4,
+    chockers:5
 
+
+  ]);
+
+});
 });

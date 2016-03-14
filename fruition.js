@@ -62,7 +62,7 @@ exports.orangePricesList = function() {
   return (orangePrices);
 };
 
-exports.cheapestOrange= function() {
+exports.cheapestOrange = function() {
   var orangePricesList = exports.orangePricesList;
   var prices = orangePricesList();
 
@@ -72,7 +72,7 @@ exports.cheapestOrange= function() {
 
   for (var shop in content) {
     if (content[shop]['oranges']) {
-      if(content[shop]['oranges'] == cheapestPrice){
+      if (content[shop]['oranges'] == cheapestPrice) {
         cheapestShop = shop;
         break;
       }
@@ -83,24 +83,25 @@ exports.cheapestOrange= function() {
 };
 exports.cheapestOrange();
 
-// exports.applesAscending= function() {
-//   var orangePricesList = exports.orangePricesList;
-//   var listShops = exports.listShops;
-//   var prices = orangePricesList();
-//
-//   var cheapestPrice = Math.min.apply(null, prices);
-//
-//   var cheapestShop = '';
-//
-//   for (var shop in content) {
-//     if (content[shop]['oranges']) {
-//       if(content[shop]['oranges'] == cheapestPrice){
-//         cheapestShop = shop;
-//         break;
-//       }
-//     }
-//   }
-//
-//   return cheapestShop;
-// };
-// exports.cheapestOrange();
+
+
+
+
+// exports.applesAscending = function() {
+//var appleShopAscending = '';
+
+var appleArray = [];
+// var appleObject = {};
+// var appleShopAscending = [];
+for (var shop in content) {
+  for (var fruit in content[shop]) {
+    if (fruit === 'apples') {
+      appleArray[shop] = content[shop][fruit];
+
+    }
+  }
+};
+
+appleArray.sort();
+console.log(appleArray)
+// appleArray.push(appleObject);
