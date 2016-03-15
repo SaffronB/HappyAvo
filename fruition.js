@@ -1,33 +1,3 @@
-var content = {
-  "woolingsworth": {
-    "apples": 4,
-    "bananas": 3,
-    "oranges": 12
-  },
-
-  "chockers": {
-    "bananas": 2,
-    "apples": 5,
-    "oranges": 4
-  },
-
-  "picklepay": {
-    "bananas": 4,
-    "oranges": 7
-  },
-
-  "shopwrong": {
-    "apples": 2,
-    "bananas": 3
-  },
-
-  "kwakspar": {
-    "oranges": 9,
-    "apples": 4
-  }
-
-};
-
 exports.listShops = function(content) {
   var shopArray = [];
   for (var shop in content) {
@@ -52,18 +22,20 @@ exports.listFruit = function(content) {
   return (fruitArray);
 };
 
-exports.orangePricesList = function(content) {
+exports.orangePricesList = function(data) {
   var orangePrices = [];
-  for (var shop in content) {
-    if (content[shop]['oranges']) {
-      orangePrices.push(content[shop]['oranges']);
+  for (var shop in data) {
+    if (data[shop]['oranges']) {
+      orangePrices.push(data[shop]['oranges']);
     }
   }
   return (orangePrices);
 };
 
 exports.cheapestOrange = function(content) {
+
   var orangePricesList = exports.orangePricesList;
+
   var prices = orangePricesList(content);
 
   var cheapestPrice = Math.min.apply(null, prices);
@@ -89,44 +61,53 @@ exports.cheapestOrange = function(content) {
 
 exports.applesOrder = function(content) {
 
-var appleArrayAscending = [];
-var appleArrayDescending =[];
+  var appleArrayAscending = [];
+  var appleArrayDescending = [];
+  var applePricing = {};
+  applePricing = {
+    ascending: [],
+    descending: [],
+  }
 
-for (var shop in content) {
-  for (var fruit in content[shop]) {
-    if (fruit === 'apples') {
-    	var appleObject = {};
-      appleObject = {
-      	shopName: shop,
-      	price: content[shop][fruit]
+  for (var shop in content) {
+    for (var fruit in content[shop]) {
+      if (fruit === 'apples') {
+        var appleObject = {};
+        appleObject = {
+          shopName: shop,
+          price: content[shop][fruit]
+        }
+        appleArrayAscending.push(appleObject);
+        appleArrayDescending.push(appleObject);
       }
-      appleArrayAscending.push(appleObject);
-      appleArrayDescending.push(appleObject);
     }
+  };
+
+  function compare(a, b) {
+    return a.price > b.price;
   }
-};
-function compare(a,b) {
-  return a.price > b.price;
-}
-function comparecompare (a, b){
-  return b.price > a.price;
-}
+
+  function comparecompare(a, b) {
+    return b.price > a.price;
+  }
 
 
-appleArrayAscending.sort(compare);
-appleArrayDescending.sort (comparecompare);
-return appleArrayAscending;
-return appleArrayDescending
-}
+  appleArrayAscending.sort(compare);
+  applePricing.ascending.push(appleArrayAscending);
+  appleArrayDescending.sort(comparecompare);
+  applePricing.descending.push(appleArrayDescending);
 
+
+  return applePricing;
+}
 exports.allOranges = function(content) {
-var orangeShops = [];
-for (var shop in content) {
-  if (content[shop]['oranges']) {
-    orangeShops.push(shop);
+  var orangeShops = [];
+  for (var shop in content) {
+    if (content[shop]['oranges']) {
+      orangeShops.push(shop);
+    }
+
+
   }
-
-
-}
-return orangeShops;
+  return orangeShops;
 }

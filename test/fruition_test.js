@@ -39,10 +39,13 @@ describe("For the fruition project, ", function() {
         "bananas": 2,"apples": 5,"oranges": 4},"picklepay": {"bananas": 4,"oranges": 7},"shopwrong": {"apples": 2,
         "bananas": 3},  "kwakspar": {"oranges": 9,"apples": 4}});
 
-    assert.deepEqual(result, [{shopName: 'shopwrong', price: 2}, {shopName: 'woolingsworth',price: 4}, {shopName: 'kwakspar',
-      price: 4}, {shopName: 'chockers',price: 5}]);
-      [{shopName: 'chockers',price: 5}, {shopName: 'woolingsworth',price: 4}, {shopName: 'kwakspar',price: 4}, {shopName: 'shopwrong',
-      price: 2}]
+    assert.deepEqual(result, {ascending: [[{shopName: 'shopwrong', price: 2}, {shopName: 'woolingsworth',price: 4}, {shopName: 'kwakspar',
+      price: 4}, {shopName: 'chockers',price: 5}]], descending:[[{shopName: 'chockers',price: 5}, {shopName: 'woolingsworth',price: 4}, {shopName: 'kwakspar',price: 4}, {shopName: 'shopwrong',
+      price: 2}]] }   );
+
+
+
+
 
     });
 
