@@ -87,30 +87,46 @@ exports.cheapestOrange();
 
 
 
-// exports.applesAscending = function() {
+exports.applesOrder = function() {
 
-var appleArray = [];
+var appleArrayAscending = [];
+var appleArrayDescending =[];
 
 for (var shop in content) {
   for (var fruit in content[shop]) {
     if (fruit === 'apples') {
     	var appleObject = {};
-      appleObject[shop] = content[shop][fruit];
-      appleArray.push(appleObject);
-
+      appleObject = {
+      	shopName: shop,
+      	price: content[shop][fruit]
+      }
+      appleArrayAscending.push(appleObject);
+      appleArrayDescending.push(appleObject);
     }
   }
 };
 function compare(a,b) {
-  if (a < b)
-    return -1;
-  else if (a> b)
-    return 1;
-  else
-    return 0;
+  return a.price > b.price;
+}
+function comparecompare (a, b){
+  return b.price > a.price;
 }
 
 
-appleArray.sort(compare);
+appleArrayAscending.sort(compare);
+appleArrayDescending.sort (comparecompare);
+return appleArrayAscending;
+return appleArrayDescending
+}
 
-console.log(appleArray)
+exports.allOranges = function() {
+var orangeShops = [];
+for (var shop in content) {
+  if (content[shop]['oranges']) {
+    orangeShops.push(shop);
+  }
+
+
+}
+return orangeShops;
+}
