@@ -28,7 +28,7 @@ var content = {
 
 };
 
-exports.listShops = function() {
+exports.listShops = function(content) {
   var shopArray = [];
   for (var shop in content) {
     shopArray.push(shop);
@@ -36,7 +36,7 @@ exports.listShops = function() {
   return (shopArray);
 };
 
-exports.listFruit = function() {
+exports.listFruit = function(content) {
   var initialFruitArray = [];
   var fruitArray = [];
   for (var shop in content) {
@@ -52,7 +52,7 @@ exports.listFruit = function() {
   return (fruitArray);
 };
 
-exports.orangePricesList = function() {
+exports.orangePricesList = function(content) {
   var orangePrices = [];
   for (var shop in content) {
     if (content[shop]['oranges']) {
@@ -62,32 +62,32 @@ exports.orangePricesList = function() {
   return (orangePrices);
 };
 
-exports.cheapestOrange = function() {
+exports.cheapestOrange = function(content) {
   var orangePricesList = exports.orangePricesList;
-  var prices = orangePricesList();
+  var prices = orangePricesList(content);
 
   var cheapestPrice = Math.min.apply(null, prices);
-
   var cheapestShop = '';
 
+
   for (var shop in content) {
-    if (content[shop]['oranges']) {
-      if (content[shop]['oranges'] == cheapestPrice) {
+
+    if (content[shop]["oranges"]) {
+      if (content[shop]["oranges"] == cheapestPrice) {
         cheapestShop = shop;
-        break;
+
       }
     }
   }
-
   return cheapestShop;
 };
-exports.cheapestOrange();
 
 
 
 
 
-exports.applesOrder = function() {
+
+exports.applesOrder = function(content) {
 
 var appleArrayAscending = [];
 var appleArrayDescending =[];
@@ -119,7 +119,7 @@ return appleArrayAscending;
 return appleArrayDescending
 }
 
-exports.allOranges = function() {
+exports.allOranges = function(content) {
 var orangeShops = [];
 for (var shop in content) {
   if (content[shop]['oranges']) {
