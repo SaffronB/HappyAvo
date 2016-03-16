@@ -54,11 +54,6 @@ exports.cheapestOrange = function(content) {
   return cheapestShop;
 };
 
-
-
-
-
-
 exports.applesOrder = function(content) {
 
   var appleArrayAscending = [];
@@ -91,23 +86,57 @@ exports.applesOrder = function(content) {
     return b.price > a.price;
   }
 
-
   appleArrayAscending.sort(compare);
   applePricing.ascending.push(appleArrayAscending);
   appleArrayDescending.sort(comparecompare);
   applePricing.descending.push(appleArrayDescending);
 
-
   return applePricing;
-}
+};
+
 exports.allOranges = function(content) {
   var orangeShops = [];
   for (var shop in content) {
     if (content[shop]['oranges']) {
       orangeShops.push(shop);
     }
-
-
   }
   return orangeShops;
-}
+};
+
+exports.cheapestPrice = function(content) {
+  var fruitPrices = [];
+  var cheapestP;
+
+  for (var shop in content) {
+    for (var fruit in content[shop]) {
+      fruitPrices.push(content[shop][fruit]);
+    }
+  }
+
+  for (var i = 0; i < fruitPrices.length; i++) {
+    if (typeof cheapestP == 'undefined') {
+      cheapestP = fruitPrices[i];
+    } else {
+      if (fruitPrices[i] < cheapestP) cheapestP = fruitPrices[i];
+    }
+  }
+
+  return cheapestP;
+};
+
+exports.cheapestFruit = function(content) {
+
+  var cheapestPriceNumber = exports.cheapestPrice(content);
+  var cheapestFruits = [];
+  for (var shop in content) {
+    for (var fruit in content[shop]) {
+      if (content[shop][fruit] === cheapestPriceNumber) {
+        var shopFruitObject = {};
+        shopFruitObject[shop] = fruit;
+        cheapestFruits.push(shopFruitObject);
+      }
+    }
+  }
+  return cheapestFruits;
+};

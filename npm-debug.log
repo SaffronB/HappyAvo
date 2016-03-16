@@ -1,0 +1,396 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jshint',
+1 verbose cli   'jscs' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'jshint', null ]
+7 verbose cache add spec jshint
+8 silly cache add args [ 'jscs', null ]
+9 verbose cache add spec jscs
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'jshint',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'jshint',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: 'latest',
+10 silly cache add   type: 'tag' }
+11 silly addNamed jshint@latest
+12 verbose addNamed "latest" is being treated as a dist-tag for jshint
+13 info addNameTag [ 'jshint', 'latest' ]
+14 silly mapToRegistry name jshint
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/jshint
+18 verbose addNameTag registry:https://registry.npmjs.org/jshint not in flight; fetching
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'jscs',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'jscs',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: 'latest',
+19 silly cache add   type: 'tag' }
+20 silly addNamed jscs@latest
+21 verbose addNamed "latest" is being treated as a dist-tag for jscs
+22 info addNameTag [ 'jscs', 'latest' ]
+23 silly mapToRegistry name jscs
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/jscs
+27 verbose addNameTag registry:https://registry.npmjs.org/jscs not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/jshint
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 9:20:36 AM
+31 verbose request id 1b4364110060cc28
+32 http request GET https://registry.npmjs.org/jshint
+33 verbose request uri https://registry.npmjs.org/jscs
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 9:20:36 AM
+36 http request GET https://registry.npmjs.org/jscs
+37 http 200 https://registry.npmjs.org/jscs
+38 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 verbose headers   etag: '"BHZFAMNI7RGHGAUA3GIU53VXU"',
+38 verbose headers   'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=300',
+38 verbose headers   'content-length': '185962',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   date: 'Wed, 16 Mar 2016 07:20:32 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   age: '192',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-ams4128-AMS',
+38 verbose headers   'x-cache': 'HIT',
+38 verbose headers   'x-cache-hits': '1',
+38 verbose headers   'x-timer': 'S1458112832.203462,VS0,VE1',
+38 verbose headers   vary: 'Accept' }
+39 silly get cb [ 200,
+39 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 silly get     etag: '"BHZFAMNI7RGHGAUA3GIU53VXU"',
+39 silly get     'content-type': 'application/json',
+39 silly get     'cache-control': 'max-age=300',
+39 silly get     'content-length': '185962',
+39 silly get     'accept-ranges': 'bytes',
+39 silly get     date: 'Wed, 16 Mar 2016 07:20:32 GMT',
+39 silly get     via: '1.1 varnish',
+39 silly get     age: '192',
+39 silly get     connection: 'keep-alive',
+39 silly get     'x-served-by': 'cache-ams4128-AMS',
+39 silly get     'x-cache': 'HIT',
+39 silly get     'x-cache-hits': '1',
+39 silly get     'x-timer': 'S1458112832.203462,VS0,VE1',
+39 silly get     vary: 'Accept' } ]
+40 verbose get saving jscs to /Users/Saffronbeatson/.npm/registry.npmjs.org/jscs/.cache.json
+41 http 200 https://registry.npmjs.org/jshint
+42 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+42 verbose headers   etag: '"DJ2RGQG0ZSTRA5FU1XNMJP2ZZ"',
+42 verbose headers   'content-type': 'application/json',
+42 verbose headers   'cache-control': 'max-age=300',
+42 verbose headers   'content-length': '112636',
+42 verbose headers   'accept-ranges': 'bytes',
+42 verbose headers   date: 'Wed, 16 Mar 2016 07:20:32 GMT',
+42 verbose headers   via: '1.1 varnish',
+42 verbose headers   age: '277',
+42 verbose headers   connection: 'keep-alive',
+42 verbose headers   'x-served-by': 'cache-ams4138-AMS',
+42 verbose headers   'x-cache': 'HIT',
+42 verbose headers   'x-cache-hits': '4',
+42 verbose headers   'x-timer': 'S1458112832.207064,VS0,VE0',
+42 verbose headers   vary: 'Accept' }
+43 silly get cb [ 200,
+43 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 silly get     etag: '"DJ2RGQG0ZSTRA5FU1XNMJP2ZZ"',
+43 silly get     'content-type': 'application/json',
+43 silly get     'cache-control': 'max-age=300',
+43 silly get     'content-length': '112636',
+43 silly get     'accept-ranges': 'bytes',
+43 silly get     date: 'Wed, 16 Mar 2016 07:20:32 GMT',
+43 silly get     via: '1.1 varnish',
+43 silly get     age: '277',
+43 silly get     connection: 'keep-alive',
+43 silly get     'x-served-by': 'cache-ams4138-AMS',
+43 silly get     'x-cache': 'HIT',
+43 silly get     'x-cache-hits': '4',
+43 silly get     'x-timer': 'S1458112832.207064,VS0,VE0',
+43 silly get     vary: 'Accept' } ]
+44 verbose get saving jshint to /Users/Saffronbeatson/.npm/registry.npmjs.org/jshint/.cache.json
+45 silly addNameTag next cb for jshint with tag latest
+46 silly addNamed jshint@2.9.1
+47 verbose addNamed "2.9.1" is a plain semver version for jshint
+48 silly addNameTag next cb for jscs with tag latest
+49 silly addNamed jscs@2.11.0
+50 verbose addNamed "2.11.0" is a plain semver version for jscs
+51 silly mapToRegistry name jscs
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/jscs
+55 verbose addRemoteTarball https://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz not in flight; adding
+56 verbose addRemoteTarball [ 'https://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz',
+56 verbose addRemoteTarball   '6e11ef0caaa07731f9dcc2b2b27d8ecee1ddbcb6' ]
+57 silly mapToRegistry name jshint
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/jshint
+61 verbose addRemoteTarball https://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz not in flight; adding
+62 verbose addRemoteTarball [ 'https://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz',
+62 verbose addRemoteTarball   '3136b68f8b6fa37423aacb8ec5e18a1ada7a2638' ]
+63 info retry fetch attempt 1 at 9:20:37 AM
+64 info attempt registry request try #1 at 9:20:37 AM
+65 http fetch GET https://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz
+66 info retry fetch attempt 1 at 9:20:37 AM
+67 info attempt registry request try #1 at 9:20:37 AM
+68 http fetch GET https://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz
+69 http fetch 200 https://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz
+70 http fetch 200 https://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz
+71 silly fetchAndShaCheck shasum 3136b68f8b6fa37423aacb8ec5e18a1ada7a2638
+72 verbose addTmpTarball /var/folders/d1/rq36fts10d348496ld3k8xbh0000gn/T/npm-46919-77f2259b/registry.npmjs.org/jshint/-/jshint-2.9.1.tgz not in flight; adding
+73 verbose addTmpTarball already have metadata; skipping unpack for jshint@2.9.1
+74 silly cache afterAdd jshint@2.9.1
+75 verbose afterAdd /Users/Saffronbeatson/.npm/jshint/2.9.1/package/package.json not in flight; writing
+76 verbose afterAdd /Users/Saffronbeatson/.npm/jshint/2.9.1/package/package.json written
+77 silly fetchAndShaCheck shasum 6e11ef0caaa07731f9dcc2b2b27d8ecee1ddbcb6
+78 verbose addTmpTarball /var/folders/d1/rq36fts10d348496ld3k8xbh0000gn/T/npm-46919-77f2259b/registry.npmjs.org/jscs/-/jscs-2.11.0.tgz not in flight; adding
+79 verbose addTmpTarball already have metadata; skipping unpack for jscs@2.11.0
+80 silly cache afterAdd jscs@2.11.0
+81 verbose afterAdd /Users/Saffronbeatson/.npm/jscs/2.11.0/package/package.json not in flight; writing
+82 verbose afterAdd /Users/Saffronbeatson/.npm/jscs/2.11.0/package/package.json written
+83 silly install resolved [ { name: 'jshint',
+83 silly install resolved     version: '2.9.1',
+83 silly install resolved     homepage: 'http://jshint.com/',
+83 silly install resolved     description: 'Static analysis tool for JavaScript',
+83 silly install resolved     author:
+83 silly install resolved      { name: 'Anton Kovalyov',
+83 silly install resolved        email: 'anton@kovalyov.net',
+83 silly install resolved        url: 'http://anton.kovalyov.net/' },
+83 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/jshint/jshint.git' },
+83 silly install resolved     bugs: { url: 'https://github.com/jshint/jshint/issues' },
+83 silly install resolved     bin: { jshint: './bin/jshint' },
+83 silly install resolved     scripts:
+83 silly install resolved      { 'browser-test-server': 'node tests/helpers/browser/server',
+83 silly install resolved        build: 'node bin/build',
+83 silly install resolved        coverage: 'istanbul -- cover ./node_modules/.bin/nodeunit tests/unit',
+83 silly install resolved        data: 'node scripts/generate-identifier-data',
+83 silly install resolved        pretest: 'jshint src && jscs src',
+83 silly install resolved        changelog: 'conventional-changelog -p jshint -i CHANGELOG.md -w',
+83 silly install resolved        'github-release': 'conventional-github-releaser -p jshint',
+83 silly install resolved        'test-browser': 'node tests/browser',
+83 silly install resolved        'test-cli': 'nodeunit tests/cli.js',
+83 silly install resolved        'test-node': 'npm run test-unit && npm run test-cli && npm run test-regression',
+83 silly install resolved        'test-regression': 'nodeunit tests/regression',
+83 silly install resolved        'test-unit': 'nodeunit tests/unit',
+83 silly install resolved        test: 'npm run test-node && npm run test-browser' },
+83 silly install resolved     main: './src/jshint.js',
+83 silly install resolved     dependencies:
+83 silly install resolved      { cli: '0.6.x',
+83 silly install resolved        'console-browserify': '1.1.x',
+83 silly install resolved        exit: '0.1.x',
+83 silly install resolved        htmlparser2: '3.8.x',
+83 silly install resolved        minimatch: '2.0.x',
+83 silly install resolved        shelljs: '0.3.x',
+83 silly install resolved        'strip-json-comments': '1.0.x',
+83 silly install resolved        lodash: '3.7.x' },
+83 silly install resolved     devDependencies:
+83 silly install resolved      { browserify: '9.x',
+83 silly install resolved        'conventional-changelog': '0.4.x',
+83 silly install resolved        'conventional-github-releaser': '0.4.x',
+83 silly install resolved        coveralls: '2.11.x',
+83 silly install resolved        istanbul: '0.3.x',
+83 silly install resolved        jscs: '1.11.x',
+83 silly install resolved        jshint: '2.6.x',
+83 silly install resolved        'mock-stdin': '0.3.x',
+83 silly install resolved        nodeunit: '0.9.x',
+83 silly install resolved        phantom: '~0.7.2',
+83 silly install resolved        phantomjs: '1.9.13',
+83 silly install resolved        regenerate: '1.2.x',
+83 silly install resolved        sinon: '1.12.x',
+83 silly install resolved        'unicode-6.3.0': '0.1.x' },
+83 silly install resolved     license: '(MIT AND JSON)',
+83 silly install resolved     preferGlobal: true,
+83 silly install resolved     files: [ 'bin', 'data', 'dist', 'src' ],
+83 silly install resolved     gitHead: '7311bddf183d0bc4905ba13db879b5cb5f022d12',
+83 silly install resolved     _id: 'jshint@2.9.1',
+83 silly install resolved     _shasum: '3136b68f8b6fa37423aacb8ec5e18a1ada7a2638',
+83 silly install resolved     _from: 'jshint@latest',
+83 silly install resolved     _npmVersion: '2.14.0',
+83 silly install resolved     _nodeVersion: '0.12.7',
+83 silly install resolved     _npmUser: { name: 'jugglinmike', email: 'mike@mikepennisi.com' },
+83 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+83 silly install resolved     dist:
+83 silly install resolved      { shasum: '3136b68f8b6fa37423aacb8ec5e18a1ada7a2638',
+83 silly install resolved        tarball: 'http://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz' },
+83 silly install resolved     directories: {},
+83 silly install resolved     _resolved: 'https://registry.npmjs.org/jshint/-/jshint-2.9.1.tgz' },
+83 silly install resolved   { author:
+83 silly install resolved      { name: 'Marat Dulin',
+83 silly install resolved        email: 'mdevils@yandex.ru',
+83 silly install resolved        url: 'https://github.com/jscs-dev/node-jscs/graphs/contributors' },
+83 silly install resolved     description: 'JavaScript Code Style',
+83 silly install resolved     name: 'jscs',
+83 silly install resolved     version: '2.11.0',
+83 silly install resolved     main: 'lib/checker',
+83 silly install resolved     homepage: 'http://jscs.info',
+83 silly install resolved     keywords:
+83 silly install resolved      [ 'code style',
+83 silly install resolved        'formatter',
+83 silly install resolved        'lint',
+83 silly install resolved        'linter',
+83 silly install resolved        'style guide',
+83 silly install resolved        'validate' ],
+83 silly install resolved     license: 'MIT',
+83 silly install resolved     repository: { type: 'git', url: 'https://github.com/jscs-dev/node-jscs' },
+83 silly install resolved     bugs: { url: 'https://github.com/jscs-dev/node-jscs/issues' },
+83 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+83 silly install resolved     engines: { node: '>= 0.10.0' },
+83 silly install resolved     dependencies:
+83 silly install resolved      { 'babel-jscs': '^2.0.0',
+83 silly install resolved        chalk: '~1.1.0',
+83 silly install resolved        'cli-table': '~0.3.1',
+83 silly install resolved        commander: '~2.9.0',
+83 silly install resolved        escope: '^3.2.0',
+83 silly install resolved        esprima: '~2.7.0',
+83 silly install resolved        estraverse: '^4.1.0',
+83 silly install resolved        exit: '~0.1.2',
+83 silly install resolved        glob: '^5.0.1',
+83 silly install resolved        htmlparser2: '3.8.3',
+83 silly install resolved        'js-yaml': '~3.4.0',
+83 silly install resolved        'jscs-jsdoc': '^1.3.1',
+83 silly install resolved        'jscs-preset-wikimedia': '~1.0.0',
+83 silly install resolved        jsonlint: '~1.6.2',
+83 silly install resolved        lodash: '~3.10.0',
+83 silly install resolved        minimatch: '~3.0.0',
+83 silly install resolved        'natural-compare': '~1.2.2',
+83 silly install resolved        pathval: '~0.1.1',
+83 silly install resolved        prompt: '~0.2.14',
+83 silly install resolved        'reserved-words': '^0.1.1',
+83 silly install resolved        resolve: '^1.1.6',
+83 silly install resolved        'strip-bom': '^2.0.0',
+83 silly install resolved        'strip-json-comments': '~1.0.2',
+83 silly install resolved        'to-double-quotes': '^2.0.0',
+83 silly install resolved        'to-single-quotes': '^2.0.0',
+83 silly install resolved        vow: '~0.4.8',
+83 silly install resolved        'vow-fs': '~0.3.4',
+83 silly install resolved        xmlbuilder: '^3.1.0' },
+83 silly install resolved     devDependencies:
+83 silly install resolved      { browserify: '^12.0.0',
+83 silly install resolved        chai: '^3.3.0',
+83 silly install resolved        coveralls: '~2.11.2',
+83 silly install resolved        'has-ansi': '~2.0.0',
+83 silly install resolved        jshint: '~2.8.0',
+83 silly install resolved        mocha: '^2.2.0',
+83 silly install resolved        regenerate: '~1.2.1',
+83 silly install resolved        rewire: '^2.3.1',
+83 silly install resolved        sinon: '^1.13.0',
+83 silly install resolved        'sinon-chai': '^2.8.0',
+83 silly install resolved        'unicode-7.0.0': '~0.1.5',
+83 silly install resolved        'unit-coverage': '^4.0.1',
+83 silly install resolved        xml2js: '~0.4.4' },
+83 silly install resolved     bin: { jscs: './bin/jscs' },
+83 silly install resolved     'unit-coverage': { common: [Object] },
+83 silly install resolved     scripts:
+83 silly install resolved      { lint: 'jshint . && node bin/jscs lib test bin publish',
+83 silly install resolved        pretest: 'npm run lint',
+83 silly install resolved        test: 'mocha --color',
+83 silly install resolved        'autofix-tests': 'node test/scripts/integration.js',
+83 silly install resolved        coverage: 'unit-coverage run -p common',
+83 silly install resolved        'coverage-html': 'unit-coverage run -p common -r html -o coverage.html',
+83 silly install resolved        coveralls: 'unit-coverage run -p common -r lcov -o out.lcov && cat out.lcov | coveralls',
+83 silly install resolved        browserify: 'browserify --standalone JscsStringChecker lib/string-checker.js -o jscs-browser.js',
+83 silly install resolved        changelog: 'git log `git describe --tags --abbrev=0`..HEAD --pretty=format:\' * %s (%an)\' | grep -v \'Merge pull request\'',
+83 silly install resolved        release: 'node publish/prepublish && npm test && npm publish',
+83 silly install resolved        postpublish: 'node publish/postpublish',
+83 silly install resolved        travis: 'npm run test && npm run autofix-tests && npm run coveralls' },
+83 silly install resolved     files:
+83 silly install resolved      [ 'bin',
+83 silly install resolved        'lib',
+83 silly install resolved        'patterns',
+83 silly install resolved        'presets',
+83 silly install resolved        'LICENSE',
+83 silly install resolved        'jscs-browser.js' ],
+83 silly install resolved     gitHead: '8d25f6dddcb1e4f0cfb1bfeefd297a612b77e86b',
+83 silly install resolved     _id: 'jscs@2.11.0',
+83 silly install resolved     _shasum: '6e11ef0caaa07731f9dcc2b2b27d8ecee1ddbcb6',
+83 silly install resolved     _from: 'jscs@latest',
+83 silly install resolved     _npmVersion: '3.3.12',
+83 silly install resolved     _nodeVersion: '5.1.0',
+83 silly install resolved     _npmUser: { name: 'markelog', email: 'markelog@gmail.com' },
+83 silly install resolved     dist:
+83 silly install resolved      { shasum: '6e11ef0caaa07731f9dcc2b2b27d8ecee1ddbcb6',
+83 silly install resolved        tarball: 'http://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz' },
+83 silly install resolved     _npmOperationalInternal:
+83 silly install resolved      { host: 'packages-13-west.internal.npmjs.com',
+83 silly install resolved        tmp: 'tmp/jscs-2.11.0.tgz_1456947181906_0.41519897105172276' },
+83 silly install resolved     directories: {},
+83 silly install resolved     _resolved: 'https://registry.npmjs.org/jscs/-/jscs-2.11.0.tgz' } ]
+84 info install jshint@2.9.1 into /usr/local/lib
+85 info install jscs@2.11.0 into /usr/local/lib
+86 info installOne jshint@2.9.1
+87 verbose installOne of jshint to /usr/local/lib not in flight; installing
+88 info installOne jscs@2.11.0
+89 verbose installOne of jscs to /usr/local/lib not in flight; installing
+90 verbose lock using /Users/Saffronbeatson/.npm/_locks/jshint-60c9d5e162d557b6.lock for /usr/local/lib/node_modules/jshint
+91 verbose lock using /Users/Saffronbeatson/.npm/_locks/jscs-6edbd6e3f0cd298d.lock for /usr/local/lib/node_modules/jscs
+92 silly install write writing jshint 2.9.1 to /usr/local/lib/node_modules/jshint
+93 silly install write writing jscs 2.11.0 to /usr/local/lib/node_modules/jscs
+94 verbose unbuild lib/node_modules/jshint
+95 verbose unbuild lib/node_modules/jscs
+96 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged from base /usr/local
+97 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
+98 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged from base /usr/local
+99 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
+100 verbose tar unpack /Users/Saffronbeatson/.npm/jshint/2.9.1/package.tgz
+101 verbose tar unpacking to /usr/local/lib/node_modules/jshint
+102 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged
+103 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
+104 verbose tar unpack /Users/Saffronbeatson/.npm/jscs/2.11.0/package.tgz
+105 verbose tar unpacking to /usr/local/lib/node_modules/jscs
+106 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged
+107 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
+108 silly gunzTarPerm modes [ '755', '644' ]
+109 silly gunzTarPerm modes [ '755', '644' ]
+110 error tar.unpack untar error /Users/Saffronbeatson/.npm/jshint/2.9.1/package.tgz
+111 error tar.unpack untar error /Users/Saffronbeatson/.npm/jscs/2.11.0/package.tgz
+112 verbose unlock done using /Users/Saffronbeatson/.npm/_locks/jshint-60c9d5e162d557b6.lock for /usr/local/lib/node_modules/jshint
+113 verbose unlock done using /Users/Saffronbeatson/.npm/_locks/jscs-6edbd6e3f0cd298d.lock for /usr/local/lib/node_modules/jscs
+114 verbose fstream_path /usr/local/lib/node_modules/jshint
+115 verbose fstream_type Directory
+116 verbose fstream_class DirWriter
+117 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/jshint'
+117 verbose stack     at Error (native)
+118 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+118 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+118 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+119 verbose cwd /Users/Saffronbeatson/CODEX/HappyAvo
+120 error Darwin 14.5.0
+121 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "jshint" "jscs"
+122 error node v4.3.1
+123 error npm  v2.14.12
+124 error path /usr/local/lib/node_modules/jshint
+125 error code EACCES
+126 error errno -13
+127 error syscall mkdir
+128 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/jshint'
+128 error     at Error (native)
+128 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/jshint']
+128 error   errno: -13,
+128 error   code: 'EACCES',
+128 error   syscall: 'mkdir',
+128 error   path: '/usr/local/lib/node_modules/jshint',
+128 error   fstream_type: 'Directory',
+128 error   fstream_path: '/usr/local/lib/node_modules/jshint',
+128 error   fstream_class: 'DirWriter',
+128 error   fstream_stack:
+128 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+128 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+128 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+129 error Please try running this command again as root/Administrator.
+130 verbose exit [ -13, true ]
+131 verbose unbuild lib/node_modules/jshint
+132 silly gentlyRm /usr/local/lib/node_modules/jshint is being purged from base /usr/local
+133 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jshint
+134 verbose unbuild lib/node_modules/jscs
+135 silly gentlyRm /usr/local/lib/node_modules/jscs is being purged from base /usr/local
+136 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jscs
